@@ -11,7 +11,7 @@ def number(k):
     res = []
     n = int(k ** (1.5))
 
-    for i in range(1,n):
+    for i in range(2,n):
         p = 0
         for j in range(2,10):
              if (i%j !=0) and (i != j): p+=1
@@ -20,7 +20,7 @@ def number(k):
            break
     return res[k - 1]
 
-# print(number(15))
+# print(number(5))
 
 # Выводы: Несмотря на более короткий код, расчеты идут существенно медленее
 
