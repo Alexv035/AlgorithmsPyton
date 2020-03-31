@@ -37,9 +37,9 @@ def number(k):
 
     return res[k]
 
-#print(number(1000))
+#print(number(10000))
 
-cProfile.run('number(100)')
+#cProfile.run('number(100)')
 #1645 function calls in 0.001 seconds
 #540    0.000    0.000    0.000    0.000 {built-in method builtins.len}
 #1101    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
