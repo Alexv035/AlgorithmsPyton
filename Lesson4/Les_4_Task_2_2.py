@@ -16,13 +16,12 @@ def number(k):
         for j in range(2,10):
              if (i%j !=0) and (i != j): k+=1
         print(i,k)
-        if k == 8: res.append(i)
-        #if k < (len(res)+ 2):
-         #   break
+        if (k == 8) or ((k==7) and (i < 10)): res.append(i)
+
     print(res)
     return res[k]
 
-print(number(10))
+#print(number(15))
 
 #cProfile.run('number(100)')
 #1645 function calls in 0.001 seconds
