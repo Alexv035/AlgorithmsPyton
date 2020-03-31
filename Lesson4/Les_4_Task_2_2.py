@@ -15,39 +15,35 @@ def number(k):
         p = 0
         for j in range(2,10):
              if (i%j !=0) and (i != j): p+=1
-        #print(i,k)
         if (p == 8) or ((p==7) and (i < 10)): res.append(i)
-        print(res)
-        print(k,len(res))
         if k == (len(res)):
            break
     return res[k - 1]
 
 # print(number(15))
 
+# Выводы: Несмотря на более короткий код, расчеты идут существенно медленее
+
+
 #cProfile.run('number(100)')
-#1645 function calls in 0.001 seconds
-#540    0.000    0.000    0.000    0.000 {built-in method builtins.len}
-#1101    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+#523 function calls in 0.001 seconds
+#419    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+#100    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 
 #cProfile.run('number(20)')
-#184 function calls in 0.000 seconds
-#70    0.000    0.000    0.000    0.000 {built-in method builtins.len}
-#110    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+#91 function calls in 0.000 seconds
+#67    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+#20    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 
 
 #cProfile.run('number(10)')
-#74 function calls in 0.000 seconds
-#28    0.000    0.000    0.000    0.000 {built-in method builtins.len}
-#42    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+#37 function calls in 0.000 seconds
+#23    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+#10    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 
 # number(10)'
-# 1000 loops, best of 5: 10.8 usec per loop
+# 1000 loops, best of 5: 25.7 usec per loop
 # number(20)'
-# 1000 loops, best of 5: 27.3 usec per loop
+# 1000 loops, best of 5: 71.5 usec per loop
 # number(100)'
-# 1000 loops, best of 5: 295 usec per loop
-# number(500)'
-# 1000 loops, best of 5: 3.4 msec per loop
-# number(1000)'
-# 1000 loops, best of 5: 9.62 msec per loop
+# 1000 loops, best of 5: 444 usec per loop
