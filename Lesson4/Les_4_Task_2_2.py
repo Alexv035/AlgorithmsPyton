@@ -9,18 +9,30 @@ import cProfile
 
 def number(k):
     res = []
-    n = int(k ** (1.5))
+    if k > 10:
+        n = int(k ** (1.5))
+    else:
+        n = k*3
 
     for i in range(2,n):
         p = 0
         for j in range(2,10):
              if (i%j !=0) and (i != j): p+=1
-        if (p == 8) or ((p==7) and (i < 10)): res.append(i)
+
+        if ((p==7) and (i < 10)): res.append(i)
+
+        if (p == 8):
+            u = 0
+            for s in res:
+                if i%s == 0: u = 1
+            if u == 0: res.append(i)
+
         if k == (len(res)):
            break
+
     return res[k - 1]
 
-# print(number(5))
+#print(number(99))
 
 # Выводы: Несмотря на более короткий код, расчеты идут существенно медленее
 
