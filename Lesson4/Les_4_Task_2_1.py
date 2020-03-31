@@ -10,7 +10,10 @@ import cProfile
 def number(k):
     init = []
     res = []
-    n = int(k ** (1.5))
+    if k > 10:
+        n = int(k ** (1.5))
+    else:
+        n = k*3
     for i in range(n):
         init.append(i)
 
