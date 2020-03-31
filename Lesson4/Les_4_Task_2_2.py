@@ -26,6 +26,10 @@ def number(k):
 
 # Выводы: Несмотря на более короткий код, расчеты идут существенно медленее особенно при больших к
 
+#cProfile.run('number(500)')
+#4074 function calls in 0.001 seconds
+#3570    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+#500    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 
 #cProfile.run('number(100)')
 #644 function calls in 0.001 seconds
@@ -49,4 +53,6 @@ def number(k):
 # 1000 loops, best of 5: 51,1 usec per loop
 # number(100)'
 # 1000 loops, best of 5: 2 msec per loop
+# number(500)'
+# 1000 loops, best of 5: 50.6 msec per loop
 
