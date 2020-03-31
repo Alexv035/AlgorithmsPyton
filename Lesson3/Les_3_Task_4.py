@@ -22,4 +22,7 @@ for i in range(len(m)):
         a = b
 #    print(result, b, m[i])
 
-print('число в массиве встречается чаще всего:  ', result)
+if a == 1:
+    print('Все числа встречаются один раз')
+else:
+    print('число в массиве встречается чаще всего:  ', result)
