@@ -12,16 +12,18 @@ def number(k):
     n = int(k ** (1.5))
 
     for i in range(1,n):
-        k = 0
+        p = 0
         for j in range(2,10):
-             if (i%j !=0) and (i != j): k+=1
-        print(i,k)
-        if (k == 8) or ((k==7) and (i < 10)): res.append(i)
+             if (i%j !=0) and (i != j): p+=1
+        #print(i,k)
+        if (p == 8) or ((p==7) and (i < 10)): res.append(i)
+        print(res)
+        print(k,len(res))
+        if k == (len(res)):
+           break
+    return res[k - 1]
 
-    print(res)
-    return res[k]
-
-#print(number(15))
+# print(number(15))
 
 #cProfile.run('number(100)')
 #1645 function calls in 0.001 seconds
