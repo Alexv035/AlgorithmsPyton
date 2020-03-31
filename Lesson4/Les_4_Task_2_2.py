@@ -38,24 +38,24 @@ def number(k):
 
 
 #cProfile.run('number(100)')
-#523 function calls in 0.001 seconds
-#419    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+#644 function calls in 0.001 seconds
+#540    0.000    0.000    0.000    0.000 {built-in method builtins.len}
 #100    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 
 #cProfile.run('number(20)')
-#91 function calls in 0.000 seconds
-#67    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+#94 function calls in 0.000 seconds
+#70    0.000    0.000    0.000    0.000 {built-in method builtins.len}
 #20    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 
 
 #cProfile.run('number(10)')
-#37 function calls in 0.000 seconds
-#23    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+#42 function calls in 0.000 seconds
+#28    0.000    0.000    0.000    0.000 {built-in method builtins.len}
 #10    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 
 # number(10)'
-# 1000 loops, best of 5: 25.7 usec per loop
+# 1000 loops, best of 5: 32.8 usec per loop
 # number(20)'
-# 1000 loops, best of 5: 71.5 usec per loop
+# 1000 loops, best of 5: 85,1 usec per loop
 # number(100)'
-# 1000 loops, best of 5: 444 usec per loop
+# 1000 loops, best of 5: 902 usec per loop
