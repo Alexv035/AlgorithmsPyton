@@ -4,7 +4,7 @@
 import numpy as np
 
 n = int(input('Введите сколько встретилось друзей: '))
-graph = [[int(i > j) for i in range(n)] for j in range(n)]
+graph = [[int(i != j) for i in range(n)] for j in range(n)]
 print(graph)
-result = int(np.sum(graph))
+result = int(np.sum(graph)/2)
 print(f'Количество рукопожатий {result}')
