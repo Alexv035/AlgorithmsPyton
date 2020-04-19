@@ -4,7 +4,7 @@
 import random
 
 size = int(input('Введите размер массива: '))
-array = [random.randint(0,49) for i in range(size)]
+array = [random.uniform(0,49.99) for i in range(size)]
 
 def merge(left, right):
     sorted = []
