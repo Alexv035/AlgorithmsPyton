@@ -3,7 +3,10 @@
 # a. граф должен храниться в виде списка смежности;
 # b. генерация графа выполняется в отдельной функции, которая принимает на вход число вершин.
 
-import numpy as np
+import collections
+import random as rm
+
+graph = collections.defaultdict(list)
 
 def adfs(graph, x, result):
     if x not in result:
@@ -13,16 +16,19 @@ def adfs(graph, x, result):
     return result
 
 def grf(n):
-    r = np.random.randint(0, n, (n, n))
-    for i in range(n): r[i,i] = 0
+    r = collections.defaultdict(list)
+    for i in range(0, n):
+        l = rm.randint(1, n)
+        r[i].append(i)
+        for j in range(0, l):
+            k = rm.randint(0, n - 1)
+            if i != k and r.get(i).count(k) < 1: r[i].append(k)
     return r
-
 
 s = int(input('Введите количество вершин: '))
 graph = grf(s)
 print('граф: ')
-print(graph)
+print(dict(graph))
 
 result = adfs(graph,0, [])
-result.append(0)
 print('Обход вершин: ', result)
