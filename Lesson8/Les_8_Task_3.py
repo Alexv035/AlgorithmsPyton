@@ -27,8 +27,10 @@ def grf(n):
 
 s = int(input('Введите количество вершин: '))
 graph = grf(s)
-print('граф: ')
-print(dict(graph))
+print('граф: ', dict(graph))
 
 result = adfs(graph,0, [])
-print('Обход вершин: ', result)
+if len(result) == s:
+    print('Обход вершин: ', result)
+else:
+    print('Обход вершин невозможен')
