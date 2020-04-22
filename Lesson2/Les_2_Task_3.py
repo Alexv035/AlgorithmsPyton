@@ -7,9 +7,8 @@ n = 0
 k = 0
 
 while a > 0:
-    b = a//10
-    c = a - b*10
-    print(c, end ='')
+    b = a // 10
+    c = a - b * 10
+    print(c, end='')
     a = b
-
 
