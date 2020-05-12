@@ -3,10 +3,10 @@
 x1, y1 = input('Введите координату х,у первой точки в формате x,y: ').split(',')
 x2, y2 = input('Введите координату х,у второй точки в формате x,y: ').split(',')
 
-x1 = int(x1)
-y1 = int(y1)
-x2 = int(x2)
-y2 = int(y2)
+x1 = float(x1)
+y1 = float(y1)
+x2 = float(x2)
+y2 = float(y2)
 
 if x2 - x1 == 0:
     b = x1
