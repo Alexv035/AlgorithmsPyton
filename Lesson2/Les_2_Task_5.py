@@ -7,14 +7,12 @@ l = 127 + 1
 r = 32
 g = 32
 while g < l:
-    for i in range (m):
-        print('%5d' % r, end = ' ')
+    for i in range(m):
+        print('%5d' % r, end=' ')
         r = r + 1
     print()
     for i in range(m):
-        print('%5s' % chr(g), end = ' ')
+        print('%5s' % chr(g), end=' ')
         g = g + 1
     print('\n')
     if l - g < 10: m = l - g
-
-
