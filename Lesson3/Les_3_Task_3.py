@@ -8,12 +8,12 @@ n = int(input('Введите количество элементов в мас�
 x = int(x)
 y = int(y)
 
-m = [rm.randint(x,y) for _ in range(n)]
+m = [rm.randint(x, y) for _ in range(n)]
 result = list.copy(m)
 print('начальный массив: ', m)
-#print(result)
+# print(result)
 
-rmin =[]
+rmin = []
 rmax = []
 a = 0
 b = 0
@@ -33,7 +33,5 @@ for i in range(len(rmin)):
 for i in range(len(rmax)):
     result[rmax[i]] = a
 
-print('min: ',a,'  max: ',b)
-print('конечный массив:  ',result)
-
-
+print('min: ', a, '  max: ', b)
+print('конечный массив:  ', result)

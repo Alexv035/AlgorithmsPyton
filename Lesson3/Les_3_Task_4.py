@@ -8,21 +8,16 @@ n = int(input('Введите количество элементов в мас�
 x = int(x)
 y = int(y)
 
-m = [rm.randint(x,y) for _ in range(n)]
+m = [rm.randint(x, y) for _ in range(n)]
 print('начальный массив: ', m)
 result = 0
-a = 0
 
 for i in range(len(m)):
     b = 0
     for y in range(len(m)):
-        if m[i] == m[y]: b +=1
-    if (b > a) or (i ==0): 
-        result = m[i]
-        a = b
-#    print(result, b, m[i])
+        if m[i] == m[y]: b += 1
+    if (b > result) or (i == 0):
+        result = b
+        res = m[i]
 
-if a == 1:
-    print('Все числа встречаются один раз')
-else:
-    print('число в массиве встречается чаще всего:  ', result)
+print('число в массиве встречается чаще всего:  ', res)
