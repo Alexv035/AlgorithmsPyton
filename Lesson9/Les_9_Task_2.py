@@ -12,7 +12,9 @@ class MyNode:
 def htree(x):
     count_x = Counter(x)
     sorted_x = deque(sorted(count_x.items(), key=lambda item: item[1]))
-    # print(sorted_x)
+
+    if len(sorted_x) == 1:
+        sorted_x.append((1, 1))
 
     while len(sorted_x) > 1:
         weight = sorted_x[0][1] + sorted_x[1][1]
