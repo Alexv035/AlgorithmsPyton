@@ -3,15 +3,16 @@
 import collections
 
 g = [
-    [0,0,1,1,9,0,0,0],
-    [0,0,9,4,0,0,5,0],
-    [0,9,0,0,3,0,6,0],
-    [0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,1,0],
-    [0,0,0,0,0,0,5,0],
-    [0,0,7,0,8,1,0,0],
-    [0,0,0,0,0,1,2,0],
+    [0, 0, 1, 1, 9, 0, 0, 0],
+    [0, 0, 9, 4, 0, 0, 5, 0],
+    [0, 9, 0, 0, 3, 0, 6, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0, 0, 5, 0],
+    [0, 0, 7, 0, 8, 1, 0, 0],
+    [0, 0, 0, 0, 0, 1, 2, 0],
 ]
+
 
 def dijkstra(graph, start):
     length = len(graph)
@@ -32,7 +33,7 @@ def dijkstra(graph, start):
         is_visited[start] = True
 
         for i, vertex in enumerate(graph[start]):
-            if vertex !=0 and not is_visited[i]:
+            if vertex != 0 and not is_visited[i]:
 
                 if cost[i] > vertex + cost[start]:
                     cost[i] = vertex + cost[start]
@@ -52,15 +53,15 @@ def dijkstra(graph, start):
 
         min_cost = float('inf')
         for i in range(length):
-            if min_cost> cost[i] and not is_visited[i]:
+            if min_cost > cost[i] and not is_visited[i]:
                 min_cost = cost[i]
                 start = i
 
     return cost, numbers
 
+
 s = int(input('От какой вершины идти: '))
 mcost, lh = dijkstra(g, s)
-#print(dijkstra(g, s))
-print('Стоимость пути от начальной точки до конечной: ', mcost,'\n')
-print('Список вершин через которых проходит путь: ', dict(lh),'\n')
 
+print('Стоимость пути от начальной точки до конечной: ', mcost, '\n')
+print('Список вершин через которых проходит путь: ', dict(lh), '\n')
